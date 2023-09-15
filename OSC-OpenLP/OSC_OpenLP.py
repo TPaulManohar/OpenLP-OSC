@@ -1,7 +1,9 @@
-#	OSC-OpenLP-API
-#	A bridge between Open Sound Control (OSC) and REST APIs
-#	Office Hours Global Community Project
-#	Created and maintained by Paul - India.
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#	OSC-OpenLP-API						    #
+#	A bridge between Open Sound Control (OSC) and REST APIs     #
+#	Office Hours Global Community Project                       #
+#	Created and maintained by Paul - India.                     #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 #OSC variables & libraries
 from pythonosc import dispatcher
@@ -57,10 +59,10 @@ def serviceList(unused_addr, stringdata):
 		data = response.json()
 		for items in data:
 			filtered_data = (items['title'])
-			plain_text = filtered_data.encode('utf-8').decode('unicode_escape')
-			#json_str = json.dumps(plain_text)	
+			#plain_text = filtered_data.encode('utf-8').decode('unicode_escape')
+			json_str = json.dumps(plain_text)	
 		osc_str = "/osc/openlp/service_list"
-		client.send_message(osc_str, [plain_text])
+		client.send_message(osc_str, [json_str])
 	else:
 	 print(f"Request failed with status code: {response.status_code}")
 
@@ -72,12 +74,6 @@ def nextSlide(unused_addr, url):
 	body = { "action": "next" }
 	reply = requests.post(Openlpserver + url, json = body)
 
-	res_str = "OSC-REST ERROR"
-	try:
-		res_str = str(reply.text)
-	except:
-		print("OSC-REST ERROR: Could not communicate with server, or server returned 204 / other response code")
-
 	osc_str = "/osc/openlp/next_slide"
 	client.send_message(osc_str, 0)
 
@@ -87,12 +83,6 @@ def previousSlide(unused_addr, url):
 	url = "/api/v2/controller/progress"
 	body = { "action": "previous" }
 	reply = requests.post(Openlpserver + url, json = body)
-
-	res_str = "OSC-REST ERROR"
-	try:
-		res_str = str(reply.text)
-	except:
-		print("OSC-REST ERROR: Could not communicate with server, or server returned 204 / other response code")
 
 	osc_str = "/osc/openlp/previous_slide"
 	client.send_message(osc_str, 0)
@@ -104,11 +94,6 @@ def nextService(unused_addr, url):
 	body = { "action": "next" }
 	reply = requests.post(Openlpserver + url, json = body)
 
-	res_str = "OSC-REST ERROR"
-	try:
-		res_str = str(reply.text)
-	except:
-		print("OSC-REST ERROR: Could not communicate with server, or server returned 204 / other response code")
 
 	osc_str = "/osc/openlp/next_service"
 	client.send_message(osc_str, 0)
@@ -120,12 +105,6 @@ def previousService(unused_addr, url):
 	body = { "action": "previous" }
 	reply = requests.post(Openlpserver + url, json = body)
 
-	res_str = "OSC-REST ERROR"
-	try:
-		res_str = str(reply.text)
-	except:
-		print("OSC-REST ERROR: Could not communicate with server, or server returned 204 / other response code")
-
 	osc_str = "/osc/openlp/previous_service"
 	client.send_message(osc_str, 0)
 
@@ -135,14 +114,9 @@ def clearLive(unused_addr, url):
 	url = "/api/v2/controller/clear/live"
 	reply = requests.post(Openlpserver + url)
 
-	res_str = "OSC-REST ERROR"
-	try:
-		res_str = str(reply.text)
-	except:
-		print("OSC-REST ERROR: Could not communicate with server, or server returned 204 / other response code")
 
 	osc_str = "/osc/openlp/clear_live"
-	client.send_message(osc_str, res_str)
+	client.send_message(osc_str, 0)
 
 #OpenLP - Preview Live
 def clearPreview(unused_addr, url):
@@ -204,7 +178,6 @@ def displayDesktop(unused_addr, url):
 	client.send_message(osc_str, 0)
 
 
-
 #Main execution script--------------------------------------
 if __name__ == "__main__":
 
@@ -225,9 +198,8 @@ if __name__ == "__main__":
 
 	print("OSC Message RecevingPort: 1234 \n 7050 (SendingPort)")
 	
-	#send_ip = "127.0.0.1"
 	send_port = 1234
-	receive_port = 7050
+	receive_port = 4318
 
 	#create the osc sending client
 	client = udp_client.SimpleUDPClient(ip_address,send_port)
