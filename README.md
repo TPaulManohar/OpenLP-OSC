@@ -6,7 +6,7 @@ OpenLP-OSC Project that can leads to use with OSC(Open Sound Control). This simp
 # Setup
 Launch the application \
 ``pip3 install python-osc `` \
-``pip3 install request `` \
+``pip3 install request `` 
 
 ``python3 <Program>`` \
 and it tooks the System local IP. Then, send OSC command to the application. OSC command begins with /osc/openlp/
