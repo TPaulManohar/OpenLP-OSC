@@ -1,0 +1,677 @@
+{
+	"info": {
+		"_postman_id": "06a458b8-a9ab-4e17-bc28-b61c8da02098",
+		"name": "OpenLP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29680776"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "http://192.168.4.201:4316/api/v2/core/login?username=openlp&password=password",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n \"id\": \"81246c41-5160-11ee-8ca9-244bfe556779\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/service/show",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"service",
+								"show"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.4.201:4316/api/v2/service/show",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"81246c41-5160-11ee-8ca9-244bfe556779\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/service/show",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"service",
+								"show"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.4.201:4316/api/v2/controller/progress/next",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"action\": \"next\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/controller/progress",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"controller",
+								"progress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.4.201:4316/api/v2/controller/progress/previous",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"action\": \"previous\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/controller/progress",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"controller",
+								"progress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.4.201:4316/api/v2/controller/clear/live",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/controller/clear/live",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"controller",
+								"clear",
+								"live"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.4.201:4316/api/v2/controller/clear/preview",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/controller/clear/preview",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"controller",
+								"clear",
+								"preview"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.4.201:4316/api/v2/core/display/hide",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"display\" : \"hide\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/core/display",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"core",
+								"display"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.4.201:4316/api/v2/core/display/show",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"display\" : \"show\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/core/display",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"core",
+								"display"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.4.201:4316/api/v2/core/display/blank",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"display\" : \"blank\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/core/display",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"core",
+								"display"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.4.201:4316/api/v2/core/display/theme",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"display\" : \"theme\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/core/display",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"core",
+								"display"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.4.201:4316/api/v2/core/display/desktop",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"display\" : \"desktop\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/core/display",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"core",
+								"display"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.4.201:4316/api/v2/service/progress/previous",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"action\": \"previous\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/service/progress",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"service",
+								"progress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.4.201:4316/api/v2/service/progress/next",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"action\": \"next\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/service/progress",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"service",
+								"progress"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "http://192.168.4.201:4316/api/v2/controller/themes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/controller/themes",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"controller",
+								"themes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.4.201:4316/api/v2/service/new",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/service/new",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"service",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.4.201:4316/api/v2/service/items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/service/items",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"service",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.4.201:4316/api/v2/core/live-image",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/core/live-image",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"core",
+								"live-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.4.201:4316/api/v2/core/system",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/core/system",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"core",
+								"system"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.4.201:4316/api/v2/core/plugins",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/core/plugins",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"core",
+								"plugins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.4.201:4316/api/v2/controller/live-items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/controller/live-items",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"controller",
+								"live-items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.4.201:4316/api/v2/controller/live-item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/controller/live-item",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"controller",
+								"live-item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.4.201:4316/api/v2/controller/theme-level",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.4.201:4316/api/v2/controller/theme-level",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"4",
+								"201"
+							],
+							"port": "4316",
+							"path": [
+								"api",
+								"v2",
+								"controller",
+								"theme-level"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
